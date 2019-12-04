@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.example.demo.dao;
 
 import com.example.demo.dto.AccountDto;
 
-public interface DemoService {
+public interface DemoDao {
 	
 	public AccountDto getAccount(int LDC, int id);
 

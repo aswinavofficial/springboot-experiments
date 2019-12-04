@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.dto.AccountDto;
 import com.example.demo.entity.Account;
 import com.example.demo.service.DemoService;
 
@@ -16,12 +17,11 @@ public class DemoController {
 	
 	
 	@GetMapping("/{LDC}/{id}")
-	public Account getAccount(@PathVariable("LDC") int LDC, @PathVariable("id") int id) {
+	public AccountDto getAccount(@PathVariable("LDC") int LDC, @PathVariable("id") int id) {
 		
 		
-		Account acc =  demoService.getAccount(LDC, id);	
+		return demoService.getAccount(LDC, id);	
 	
-		return acc;
 		
 	}
 
